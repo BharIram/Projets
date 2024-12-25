@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Iram Bhar</title>
+    <link rel="stylesheet" href="style.css">
+    <style>/* Style général pour les sections (sauf accueil) */
+       
+        
+
+</style> 
+  
+<body>
+    <canvas id="bubble" width="965" height="730"></canvas>
+
+    <script src="script.js"></script>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <a href="index.html" class="logo-button">
+                <span class="logo-text" >IB</span>
+            </a>
+        </div>
+        <div class="nav-menu">
+            <ul>
+                <li><a href="#profile">Profil</a></li>
+                <li><a href="#objectives">Objectifs</a></li>
+                <li><a href="#education">Éducation</a></li>
+                <li><a href="#internships">Stages</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#projects">Projets</a></li>
+                <li><a href="#skills">Compétences</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Section Accueil -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Bonjour, je m'appelle Iram Bhar</h1>
+            <h2>ÉTUDIANTE EN BUSINESS INTELLIGENCE</h2>
+        </div>
+        <div class="hero-image">
+            <img src="cvimg.jpg" alt="Image architecturale">
+        </div>
+    </section>
+   
+   <!-- Section Profil -->
+   <section id="profile" class="profile">
+    <h2 class="section-title">Profil</h2>
+    <p>Étudiante en 2ème année de Business Intelligence, mon parcours est le reflet d’une quête de sens et de découverte de mes vraies passions. Après un passage dans les sciences du vivant et de l’environnement, j'ai découvert une véritable passion pour l’informatique et les outils technologiques, tout en réalisant que j’étais particulièrement douée dans les domaines de la vente et du commerce.</p>
+</section>
+
+<!-- Section Objectifs -->
+<section id="objectives" class="objectives">
+    <h2 class="section-title">Objectifs</h2>
+    <p>Approfondir mes compétences en analyse de données, programmation et stratégie commerciale, afin de développer mon expertise et de contribuer de manière significative aux projets innovants.</p>
+</section>
+
+<!-- Section Éducation -->
+<section id="education" class="education">
+    <h2 class="section-title">Formation Académique</h2>
+    <ul>
+        <li><strong>Licence en Business Intelligence</strong> (en cours) - UIK, Tunis, Tunisie (2023 – Présent)</li>
+        <li><strong>Baccalauréat en Mathématiques</strong> - Lycée Ben Arous (2020 – 2021)</li>
+    </ul>
+</section>
+
+<!-- Section Stages -->
+<section id="internships" class="internships">
+    <h2 class="section-title">Stages</h2>
+    <h3>STE AKKARI & DRISSI SCP DE VETERINAIRES</h3>
+    <p><strong>Stagiaire Aide-Comptable</strong> - Hammemlif, Tunisie (07/2024 – 08/2024)</p>
+    <ul>
+        <li>Gestion et suivi des factures fournisseurs.</li>
+        <li>Assistance dans la préparation des documents comptables et le traitement des écritures.</li>
+        <li>Collaboration avec l’équipe pour optimiser les processus administratifs et financiers.</li>
+    </ul>
+</section>
+
+<!-- Section Certifications -->
+<section id="certifications" class="certifications">
+    <h2 class="section-title">Certifications</h2>
+    <ul>
+        <li>Introduction à la programmation en Java (Coursera, 2024)</li>
+        <li>Introduction à la programmation en C++ (Coursera, 2024)</li>
+        <li>Développement web : HTML, CSS et JavaScript (Coursera, 2024)</li>
+        <li>IoT : Informatique sans fil et en nuage (Coursera, 2024)</li>
+        <li>L'essentiel de la gestion des bases de données (Coursera, 2024)</li>
+        <li>Analyste de données avec Microsoft Power BI (Coursera, 2024)</li>
+    </ul>
+</section>
+
+<!-- Section Projets -->
+<section id="projects" class="projects">
+    <h2 class="section-title">Projets</h2>
+    <div class="projects-grid">
+        <div class="project-card">
+            <img src="images/project1.jpg" alt="Projet 1">
+            <h3>Projet 1</h3>
+            <p>Description du projet...</p>
+        </div>
+        <!-- Ajouter d'autres projets ici -->
+    </div>
+</section>
+<!--/* Sections communes */
+section {
+    background-color: #f4f4f4; /* Couleur d'arrière-plan par défaut */
+    padding: 2rem 10%; /* Espacement intérieur */
+    margin-bottom: 2rem; /* Espacement entre les sections */
+    border-radius: 10px; /* Coins arrondis pour un design élégant */
+    box-sizing:content-box; /* Assure que les marges et les paddings n'augmentent pas la taille des éléments */
+    background-color: #f1c6d1; /* Couleur rose pastel */
+    background: linear-gradient(to right, #f1c6d1, #fce4ec); /* Dégradé rose */
+}
+        
+.skills {
+    background-color: #f1c6d1; /* Couleur rose pastel */
+    background: linear-gradient(to right, #f1c6d1, #fce4ec); /* Dégradé rose */
+}
+
+.projects {
+    background-color: #f1c6d1; /* Couleur rose pastel */
+    background: linear-gradient(to right, #f1c6d1, #fce4ec); /* Dégradé rose */
+}
+
+.contact {
+    background-color: #f1c6d1; /* Couleur rose pastel */
+    background: linear-gradient(to right, #f1c6d1, #fce4ec); /* Dégradé rose */
+}
+.profile,.objectives,.certifications,.internships,.education{
+    background-color: #f1c6d1; /* Couleur rose pastel */
+    background: linear-gradient(to right, #f1c6d1, #fce4ec); /* Dégradé rose */
+    
+}
+
+.skills, .projects, .contact, .profile, .objectives, .certifications, .internships, .education {
+    background: linear-gradient(to right, #f1c6d1, #fce4ec); /* Dégradé rose */
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+}
+-->
+<!-- Section Compétences -->
+<section id="skills" class="skills">
+    <h2 class="section-title">Compétences</h2>
+    <div class="skills-grid">
+        <div class="skill-card">
+            <h3>Analyse de données</h3>
+            <ul>
+                <li>SQL</li>
+                <li>Visualisation</li>
+                <li>Reporting</li>
+            </ul>
+        </div>
+        <div class="skill-card">
+            <h3>Programmation</h3>
+            <ul>
+                <li>Java</li>
+                <li>C++</li>
+                <li>HTML/CSS/JavaScript</li>
+            </ul>
+        </div>
+        <div class="skill-card">
+            <h3>Outils BI</h3>
+            <ul>
+                <li>Tableau</li>
+                <li>Power BI</li>
+            </ul>
+        </div>
+        <div class="skill-card">
+            <h3>Langues</h3>
+            <ul>
+                <li>Français</li>
+                <li>Anglais</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- Section Contact -->
+<section id="contact" class="contact">
+    <h2 class="section-title">Contact</h2>
+    <div class="contact-content">
+        <div class="contact-info">
+            <p>Email : irambhar45@example.com</p>
+            <p>LinkedIn : <a href="https://www.linkedin.com/in/iram-bhar-601214307/" target="_blank">Mon LinkedIn</a></p>
+        </div>
+    </div>
+</section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Iram Bhar. Tous droits réservés.</p>
+            <div class="social-links">
+                
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <!-- Dans les sections appropriées -->
+<div class="hero-content" data-animation="fade-in">
+    <!-- contenu -->
+</div>
+
+<div class="about-text" data-animation="slide-in-left">
+    <!-- contenu -->
+</div>
+
+<div class="about-image" data-animation="slide-in-right">
+    <!-- contenu -->
+</div>
+
+<!-- Pour les liens avec animation de bordure -->
+<a href="#" class="border-animation">Voir plus</a>
+</body>
+</html>

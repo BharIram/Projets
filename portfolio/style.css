@@ -1,0 +1,605 @@
+/* Variables CSS */
+:root {
+    --primary-color: #f4c5d7; /* Rose pastel */
+    --secondary-color:#c4dcff ; /* Bleu pastel */
+    --text-color: #333;
+    --light-bg: #f4f4f4;
+    --white: #ffffff;
+    --max-width: 1200px;
+}
+
+/* Reset et styles de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Playfair Display', serif;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+/* Styles pour le menu de navigation */
+/* Styles pour le menu de navigation */
+.navbar, .navbar-brand {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 10%;
+    background: transparent;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Ombre discrète */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-brand a {
+    font-size: 1.8rem;
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    color: var(--white);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-brand a:hover {
+    color: var(--secondary-color); /* Changement de couleur au survol */
+}
+
+/* Transforme les liens en boutons carrés avec coins arrondis */
+.nav-menu ul {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: var(--white);
+    font-size: 1rem;
+    font-family: 'Arial', sans-serif;
+    background: var(--primary-color); /* Couleur des boutons */
+    padding: 10px 15px;
+    border-radius: 10px; /* Coins arrondis */
+    transition: background 0.3s ease, transform 0.2s ease;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Légère ombre */
+}
+
+.nav-menu a:hover {
+    background: var(--secondary-color); /* Couleur au survol */
+    transform: translateY(-3px); /* Effet de soulèvement */
+}
+
+.nav-menu a:active {
+    transform: translateY(1px); /* Effet d'appui */
+}
+
+/* Animation pour soulignement au survol */
+.nav-menu a::after {
+    content: "";
+    display: none; /* Retiré pour un design plus propre */
+}
+
+.nav-toggle {
+    display: none; /* Caché par défaut */
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.nav-toggle .hamburger {
+    width: 25px;
+    height: 3px;
+    background: var(--white);
+    border-radius: 5px;
+    margin: 5px 0;
+}
+.logo-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    width: 60px; /* Largeur et hauteur identiques pour obtenir un cercle */
+    height: 60px;
+    border-radius: 50%; /* Transforme le bouton en cercle */
+    background: var(--primary-color); /* Couleur de fond */
+    transition: all 0.3s var(--custom-easing);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Ombre */
+}
+
+.logo-button:hover {
+    transform: translateY(-3px); /* Effet de soulèvement au survol */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Augmente l'ombre */
+    background: var(--secondary-color); /* Change la couleur au survol */
+}
+
+.logo-button:active {
+    transform: translateY(1px); /* Effet d'appui */
+}
+
+.logo-text {
+    font-family: var(--heading-font);
+    font-size: 1.5rem; /* Ajuster la taille du texte */
+    font-weight: bold;
+    color: var(--white); /* Couleur du texte */
+    z-index: 1; /* Assure que le texte reste visible */
+    text-align: center;
+}
+
+/* Animation lumineuse */
+.logo-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255, 255, 255, 0.4),
+        transparent
+    );
+    transition: all 0.6s var(--custom-easing);
+}
+
+.logo-button:hover::before {
+    left: 100%; /* Déplacement de l'effet lumineux */
+}
+
+/* Menu mobile */
+@media (max-width: 768px) {
+    .nav-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--primary-color);
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        padding: 1rem 0;
+        display: none;
+    }
+
+    .nav-menu.active {
+        display: flex; /* Affiche le menu en mode mobile */
+    }
+
+    .nav-toggle {
+        display: flex; /* Affiche le bouton toggle */
+    }
+}
+
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10%;
+    background: var(--white); /* Arrière-plan blanc */
+}
+
+.hero-content {
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.hero h1 {
+    font-size: 3.8rem; /* Taille ajustée pour plus d'équilibre */
+    font-family: 'Playfair Display', serif;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.05em;
+    line-height: 1.2; /* Meilleure lisibilité */
+}
+
+.hero h2 {
+    font-size: 1.4rem;
+    font-family: 'Arial', sans-serif;
+    margin-bottom: 1.2rem;
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+}
+
+.hero-image {
+    max-width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image img {
+    width: 500px; /* Largeur légèrement augmentée */
+    height:500px; /* Hauteur égale pour conserver un carré */
+    box-shadow: 0 10px 20px rgba(111, 198, 255, 0.15); /* Ombre subtile */
+    object-fit: cover; /* L'image reste bien cadrée */
+}
+
+
+
+.hero .btn:hover {
+    background: var(--secondary-color);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero h2 {
+        font-size: 1.2rem;
+    }
+
+    .hero-image {
+        max-width: 80%;
+        margin-top: 1.5rem;
+    }
+
+    .hero-image img {
+        width: 250px;
+        height: 250px;
+    }
+}
+.section {
+    padding: 2rem 10%;
+    background: var(--white);
+    margin-bottom: 2rem;
+}
+
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.profile, .objectives, .education, .internships, .certifications {
+    line-height: 1.8;
+    color: var(--text-color);
+}
+
+.profile h3, .objectives h3, .education h3, .internships h3, .certifications h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--secondary-color);
+}
+
+
+.profile h2, .objectives h2, .education h2, .internships h2, .certifications h2 ,.skills.h2,.projects.h3,.skills.h2,.contact.h2{
+    font-family: 'Playfair Display', serif;
+    color: #c4dcff; /* Bleu pastel */
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #c4dcff;
+}
+
+/* À propos */
+.about-content {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    background-color: #f1c6d1; /* Couleur rose pastel */
+    background: linear-gradient(to right, #f1c6d1, #fce4ec); /* Dégradé rose */
+}
+
+
+.about-text {
+    flex: 1;
+}
+
+.about-image img {
+    max-width: 400px;
+    border-radius: 10px;
+}
+
+/* Compétences */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.skill-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.skill-card h3 {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.skill-card ul {
+    list-style-position: inside;
+}
+
+/* Projets */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    background: var(--white);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-card h3 {
+    padding: 1rem;
+    color: var(--primary-color);
+}
+
+.project-card p {
+    padding: 0 1rem 1rem;
+}
+
+/* Contact */
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background: var(--secondary-color);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: var(--primary-color);
+}
+
+/* Footer */
+.footer {
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 2rem 5%;
+    text-align: center;
+}
+
+.social-links a {
+    color: var(--white);
+    text-decoration: none;
+    margin: 0 1rem;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .nav-toggle {
+        display: block;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--white);
+        padding: 1rem;
+    }
+
+    .nav-menu.active {
+        display: block;
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 6rem;
+    }
+
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contact-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Classes d'animation */
+.fade-in {
+    animation: fadeIn 1s ease forwards;
+}
+
+.slide-in-right {
+    animation: slideInRight 1s ease forwards;
+}
+
+.slide-in-left {
+    animation: slideInLeft 1s ease forwards;
+}
+
+/* Animation des sections */
+.hero-content {
+    opacity: 0;
+    animation: slideInLeft 1s ease forwards;
+}
+
+.hero-image {
+    opacity: 0;
+    animation: slideInRight 1s ease forwards;
+}
+
+.about-text {
+    opacity: 0;
+    animation: slideInLeft 1s ease forwards;
+}
+
+.about-image {
+    opacity: 0;
+    animation: slideInRight 1s ease forwards;
+}
+
+.skill-card {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease;
+}
+
+.project-card {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease;
+}
+
+/* Animation de la bordure */
+.border-animation {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.border-animation::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--secondary-color);
+    transition: width 0.3s ease;
+}
+
+.border-animation:hover::after {
+    width: 100%;
+}
+
+/* Animation du menu */
+.nav-menu a {
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--secondary-color);
+    transition: width 0.3s ease;
+}
+
+.nav-menu a:hover::after {
+    width: 100%;
+}
+#bubble {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Positionne le canvas derrière tout le contenu */
+  }
